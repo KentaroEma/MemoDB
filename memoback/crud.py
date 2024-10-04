@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from . import model, schema
+import model, schema
 
 # メモ一覧取得
 def get_memos(db: Session, skip: int = 0, limit: int = 100):
