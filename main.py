@@ -21,7 +21,7 @@ if page == 'registration':
             )
             if res.status_code == 200:
                 st.success('メモ登録完了')
-            st.json(res.json())
+            st.json(res.text)
 
 elif page == 'list':
     st.title('メモ一覧画面')
