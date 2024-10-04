@@ -14,7 +14,7 @@ if page == 'registration':
         submit_button = st.form_submit_button(label='メモ登録')
 
         if submit_button:
-            url = 'http://127.0.0.1:8000/memos'
+            url = 'http://10.58.191.253:8501/memos'
             res = requests.post(
                 url,
                 data=json.dumps(data)
@@ -25,7 +25,7 @@ if page == 'registration':
 
 elif page == 'list':
     st.title('メモ一覧画面')
-    res = requests.get('http://127.0.0.1:8000/memos')
+    res = requests.get('http://10.58.191.253:8501/memos')
     records = res.json()
     for record in records:
         st.subheader('・' + record.get('content'))
