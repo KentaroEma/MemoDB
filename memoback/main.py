@@ -2,7 +2,7 @@ from typing import List
 from fastapi import FastAPI, Depends
 from sqlalchemy.orm import Session
 
-from . import model, schema, crud
+import model, schema, crud
 from .database import SessionLocal, engine
 
 model.Base.metadata.create_all(bind=engine)
